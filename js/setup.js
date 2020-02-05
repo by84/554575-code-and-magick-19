@@ -16,39 +16,13 @@ var setupWizardEyes = setupWizard.querySelector('.wizard-eyes');
 
 var setupFireball = document.querySelector('.setup-fireball-wrap');
 
-var getMaxArrayLength = function (array1, array2, array3) {
-  var arrayLength = array1.length;
-  if (array1.length <= array2.length) {
-    arrayLength = array2.length;
-  } else if (array1.length <= array3.length) {
-    arrayLength = array3.length;
-  }
-
-  return arrayLength;
-};
-
-var T_LENGHT = getMaxArrayLength(WIZARD_COATCOLORS, WIZARD_EYESCOLOR, WIZARD_FIREBALLCOLOR);
-
 // функция для рандома
 var selfRandom = function (min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 };
 
-// добиваем массивы до одной длины
-var eqLength = function (arrColors) {
-  for (var i = 0; i < T_LENGHT; i++) {
-    if (!arrColors[i]) {
-      arrColors[i] = arrColors[selfRandom(0, i - 1)];
-    }
-  }
-  return arrColors;
-};
-eqLength(WIZARD_COATCOLORS);
-eqLength(WIZARD_EYESCOLOR);
-eqLength(WIZARD_FIREBALLCOLOR);
-
 var getRandArrayElem = function (array) {
-  var randArrayElem = array[selfRandom(0, T_LENGHT - 1)];
+  var randArrayElem = array[selfRandom(0, array.length - 1)];
 
   return randArrayElem;
 };
@@ -84,10 +58,8 @@ setupFireball.addEventListener('click', function () {
 });
 
 var onPopupEscPress = function (evt) {
-  if (evt.target !== focusWizardName) {
-    if (evt.key === ESC_KEY) {
-      closePopup();
-    }
+  if (evt.target !== focusWizardName && evt.key === ESC_KEY) {
+    closePopup();
   }
 };
 
