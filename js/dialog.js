@@ -19,6 +19,7 @@
 
     setupDialogElement.classList.remove('hidden');
     document.addEventListener('keydown', onPopupEscPress);
+    // window.flagD = true;
     window.memoryCoords = {
       x: setupDialogElement.offsetLeft,
       y: setupDialogElement.offsetTop
@@ -27,9 +28,11 @@
 
   var closePopup = function () {
     setupDialogElement.classList.add('hidden');
+    // window.flagD = false;
     document.removeEventListener('keydown', onPopupEscPress);
     setupDialogElement.style.top = window.memoryCoords.y + 'px';
     setupDialogElement.style.left = window.memoryCoords.x + 'px';
+
   };
 
   setupOpen.addEventListener('click', function () {

@@ -6,6 +6,7 @@
   var WIZARD_NAMES = ['Иван', 'Хуан Себастьян', 'Мария', 'Кристоф', 'Виктор', 'Юлия', 'Люпита', 'Вашингтон'];
   var WIZARD_SURNAMES = ['да Марья', 'Верон', 'Мирабелла', 'Вальц', 'Онопко', 'Топольницкая', 'Нионго', 'Ирвинг'];
   var T_LENGHT = 8;
+  var TIMEOUT_IN_MS = 10000;
   // var ESC_KEY = 'Escape';
   // var ENTER_KEY = 'Enter';
   var ESC_KEYCODE = 27;
@@ -18,6 +19,8 @@
   var FONT_GAP = 15;
   var TEXT_WIDTH = 70;
   var BAR_WIDTH = 40;
+  var URL_LOAD = 'https://js.dump.academy/code-and-magick/data';
+  var URL_SEND = 'https://js.dump.academy/code-and-magick/';
   window.const = {
     WIZARD_COATCOLORS: WIZARD_COATCOLORS,
     WIZARD_EYESCOLOR: WIZARD_EYESCOLOR,
@@ -25,6 +28,7 @@
     WIZARD_NAMES: WIZARD_NAMES,
     WIZARD_SURNAMES: WIZARD_SURNAMES,
     T_LENGHT: T_LENGHT,
+    TIMEOUT_IN_MS: TIMEOUT_IN_MS,
     // ESC_KEY: ESC_KEY,
     // ENTER_KEY: ENTER_KEY,
     ESC_KEYCODE: ESC_KEYCODE,
@@ -36,6 +40,8 @@
     GAP: GAP,
     FONT_GAP: FONT_GAP,
     TEXT_WIDTH: TEXT_WIDTH,
-    BAR_WIDTH: BAR_WIDTH
+    BAR_WIDTH: BAR_WIDTH,
+    URL_LOAD: URL_LOAD,
+    URL_SEND: URL_SEND
   };
 })();
