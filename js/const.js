@@ -7,8 +7,7 @@
   var WIZARD_SURNAMES = ['да Марья', 'Верон', 'Мирабелла', 'Вальц', 'Онопко', 'Топольницкая', 'Нионго', 'Ирвинг'];
   var T_LENGHT = 8;
   var TIMEOUT_IN_MS = 10000;
-  // var ESC_KEY = 'Escape';
-  // var ENTER_KEY = 'Enter';
+  var DEBOUNCE_INTERVAL = 500; // ms
   var ESC_KEYCODE = 27;
   var ENTER_KEYCODE = 13;
   var CLOUD_WIDTH = 420;
@@ -29,8 +28,7 @@
     WIZARD_SURNAMES: WIZARD_SURNAMES,
     T_LENGHT: T_LENGHT,
     TIMEOUT_IN_MS: TIMEOUT_IN_MS,
-    // ESC_KEY: ESC_KEY,
-    // ENTER_KEY: ENTER_KEY,
+    DEBOUNCE_INTERVAL: DEBOUNCE_INTERVAL,
     ESC_KEYCODE: ESC_KEYCODE,
     ENTER_KEYCODE: ENTER_KEYCODE,
     CLOUD_WIDTH: CLOUD_WIDTH,

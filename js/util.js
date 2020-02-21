@@ -1,5 +1,4 @@
 'use strict';
-
 (function () {
 
   window.util = {
@@ -37,8 +36,20 @@
       if (evt.keyCode === window.const.ENTER_KEYCODE) {
         action();
       }
+    },
+    debounce: function (cb) {
+      var lastTimeout = null;
+
+      return function () {
+        var parameters = arguments;
+        if (lastTimeout) {
+          window.clearTimeout(lastTimeout);
+        }
+        lastTimeout = window.setTimeout(function () {
+          cb.apply(null, parameters);
+        }, window.const.DEBOUNCE_INTERVAL);
+      };
     }
+
   };
 })();
-
-
